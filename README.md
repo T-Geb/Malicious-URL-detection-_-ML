@@ -28,9 +28,18 @@ Three classification models were tested:
 - HistGradientBoosting
 - Logistic Regression
 
-The final model was Random Forest, chosen for its overall accuracy and balanced performance across all URL classes.
+~~The final model was Random Forest, chosen for its overall accuracy and balanced performance across all URL classes.
+
+## Project Documentation
+
+This project includes a business and technical documentation (`Malicious_URL_Detection_Capstone.pdf`) featuring:
+- A transmittal letter
+- Project proposal and plan
+- Technical post-implementation and evaluation report
+
+*Note: Business documentation was created for a fictional company (CrBlock Solutions) as part of academic requirements to demonstrate professional communication skills.*
 
 ##  Run in Google Colab
 - [Click here to access the notebook in Google Colab](https://colab.research.google.com/drive/1HjcVR8857J4YFjuRF7JmNzJgZcLJoqk2?usp=sharing) to test the tool.
 - Click Runtime > Run all to execute the notebook.
-- The input form appears near the bottom.
+- The input form appears near the bottom.~~
