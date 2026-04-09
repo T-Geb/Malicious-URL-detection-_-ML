@@ -1,45 +1,41 @@
 # Malicious URL Detection Tool - Using Machine Learning
-> Created for the Computer Science Capstone at Western Governors University (WGU).
 
 ## About
-This project is a machine learning-based URL classification tool that predicts the safety of URLS. It identifies threats such as phishing, defacement, and malware using structural and text-based URL features.
 
-## Features
+This project is a machine learning-based URL classification tool that predicts the safety of URLs, classifying them as:
 
-- Classifies URLs into four categories: benign, phishing, defacement, or malware
+- Benign
+- Phishing
+- Defacement
+- Malware
 
-## Usage
-
-The tool runs in a Jupyter notebook and includes a simple input form for entering a URL or selecting from a sample list.
+Exploratory data analysis was performed to identify meaningful signals in raw URL strings, which were then transformed into structural and lexical features for model training.
 
 ## Dataset
 
 - Source: [Malicious URLs Dataset on Kaggle](https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset)
-- A trimmed version of the dataset is used in this project
+- A trimmed version of the dataset is used after identifying and removing a mislabeled portion of the original data sourced from PhishStorm, where phishing and benign labels were mistakenly swapped.
 
-## Custom Feature Engineering
+## Manual Feature Engineering
 
-- Manually extracted features to identify structural patterns in URLs
+Features were manually extracted to capture structural patterns in URLs, targeting length and character characteristics, HTTPS and domain properties, and suspicious keyword patterns.
 
 ## Model Selection
 
-Three classification models were tested:
+Three classification models were trained and evaluated:
+
 - Random Forest
 - HistGradientBoosting
 - Logistic Regression
 
-~~The final model was Random Forest, chosen for its overall accuracy and balanced performance across all URL classes.
+Random Forest was selected as the final model based on its overall accuracy and balanced performance across all four URL classes.
 
-## Project Documentation
+## Setup Instructions To Run In Local Environment
 
-This project includes a business and technical documentation (`Malicious_URL_Detection_Capstone.pdf`) featuring:
-- A transmittal letter
-- Project proposal and plan
-- Technical post-implementation and evaluation report
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+python3 src/main.py
+```
 
-*Note: Business documentation was created for a fictional company (CrBlock Solutions) as part of academic requirements to demonstrate professional communication skills.*
-
-##  Run in Google Colab
-- [Click here to access the notebook in Google Colab](https://colab.research.google.com/drive/1HjcVR8857J4YFjuRF7JmNzJgZcLJoqk2?usp=sharing) to test the tool.
-- Click Runtime > Run all to execute the notebook.
-- The input form appears near the bottom.~~
